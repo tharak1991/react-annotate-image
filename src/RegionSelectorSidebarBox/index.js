@@ -82,7 +82,7 @@ export default ({
   const classes = useStyles()
   return (
     <SidebarBoxContainer
-      title="Regions"
+      title="Vehicles"
       subTitle=""
       icon={<RegionIcon style={{ color: grey[700] }} />}
       expandedByDefault

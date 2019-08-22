@@ -41,17 +41,17 @@ export const examples = {
   "Simple Bounding Box": () => ({
     taskDescription:
       "Annotate each image according to this _markdown_ specification.",
-    // regionTagList: [],
-    // regionClsList: ["hotdog"],
+    regionTagList: [],
+    regionClsList: ["hotdog"],
     regionTagList: ["has-bun"],
     regionClsList: ["hotdog", "not-hotdog"],
     enabledTools: ["select", "create-box"],
-    // showTags: true,
+    showTags: true,
     images: [
       {
         src:
           "https://images.unsplash.com/photo-1496905583330-eb54c7e5915a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-        name: "hot-dogs-1"
+        // name: "hot-dogs-1"
       }
     ]
   }),
@@ -71,7 +71,7 @@ export const examples = {
   Custom: () => loadSavedInput()
 }
 
-const Editor = ({ onOpenAnnotator, lastOutput }: any) => {
+const Editor = ({ onOpenAnnotator, lastOutput }) => {
   const c = useStyles()
   const [currentError, changeCurrentError] = useState()
   const [selectedExample, changeSelectedExample] = useState(
@@ -90,7 +90,7 @@ const Editor = ({ onOpenAnnotator, lastOutput }: any) => {
         <div style={{ flexGrow: 1 }} />
         <div>
           <div style={{ display: "inline-flex" }}>
-            <Select
+            {/* <Select
               className={c.select}
               value={{ label: selectedExample, value: selectedExample }}
               options={Object.keys(examples).map(s => ({
@@ -110,7 +110,7 @@ const Editor = ({ onOpenAnnotator, lastOutput }: any) => {
                   )
                 )
               }}
-            />
+            /> */}
           </div>
           <Button
             className="button"
