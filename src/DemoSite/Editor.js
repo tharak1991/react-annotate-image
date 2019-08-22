@@ -10,6 +10,7 @@ import DialogTitle from "@material-ui/core/DialogTitle"
 import DialogContent from "@material-ui/core/DialogContent"
 import DialogActions from "@material-ui/core/DialogActions"
 import MonacoEditor from "react-monaco-editor"
+import traffic from "./../Images/traffic.jpg"
 
 const useStyles = makeStyles({
   editBar: {
@@ -37,22 +38,21 @@ const loadSavedInput = () => {
   }
 }
 
+
+
 export const examples = {
   "Simple Bounding Box": () => ({
     taskDescription:
       "Annotate each image according to this _markdown_ specification.",
     regionTagList: [],
-    regionClsList: ["hotdog"],
-    regionTagList: ["has-bun"],
-    regionClsList: ["hotdog", "not-hotdog"],
+    regionClsList: ["2 wheeler", "3 wheeler", "4 wheeler"],
+    regionTagList: ["2 wheeler", "3 wheeler", "4 wheeler"],
+    regionClsList: ["car", "truck", "bike", "cycle" , "bus" , "auto"],
     enabledTools: ["select", "create-box"],
     showTags: true,
-    images: [
-      {
-        src:
-          "https://images.unsplash.com/photo-1496905583330-eb54c7e5915a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-        // name: "hot-dogs-1"
-      }
+    images: [{
+     src: "https://images.unsplash.com/photo-1561518776-e76a5e48f731?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+    }
     ]
   }),
   "Simple Segmentation": () => ({
@@ -62,9 +62,9 @@ export const examples = {
     enabledTools: ["select", "create-polygon"],
     images: [
       {
-        src:
-          "https://images.unsplash.com/photo-1561518776-e76a5e48f731?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-        name: "car-image-1"
+        src: {traffic}
+          // "https://images.unsplash.com/photo-1561518776-e76a5e48f731?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+        // name: "car-image-1"
       }
     ]
   }),
